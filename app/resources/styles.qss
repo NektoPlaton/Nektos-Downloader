@@ -1,0 +1,328 @@
+/* Основное окно */
+QMainWindow {
+    background-color: #765C70;
+}
+
+
+/* Базовый стиль */
+QWidget {
+    color: #3D2B1F;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   Фон всего центрального окна.
+
+   Путь указан с прямыми слешами — для QSS так надёжнее.
+   --------------------------------------------------------- */
+QWidget#central_widget {
+    background-color: #765C70;
+    background-image: url("C:/Users/plato/OneDrive/Рабочий стол/VideoDownloader/app/resources/icons/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ---------------------------------------------------------
+   Главная карточка.
+
+   222 из 255 = примерно 87% непрозрачности.
+   Картинка слегка видна за карточкой, но текст остаётся
+   читаемым.
+   --------------------------------------------------------- */
+QWidget#card {
+    background-color: rgba(255, 249, 246, 222);
+
+    border: 1px solid rgba(255, 255, 255, 210);
+    border-radius: 24px;
+}
+
+
+/* Заголовок */
+QLabel#title {
+    background-color: transparent;
+    color: #24563D;
+
+    padding: 4px 10px 0;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Подзаголовок */
+QLabel#subtitle {
+    background-color: transparent;
+    color: #745A5B;
+
+    padding: 0 10px 5px;
+
+    font-size: 15px;
+}
+
+
+/* Подпись над полем выбора папки */
+QLabel#field_label {
+    background-color: transparent;
+    color: #6D5450;
+
+    padding: 0 2px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   Поля ссылки и пути к папке
+   --------------------------------------------------------- */
+QLineEdit {
+    min-height: 32px;
+
+    background-color: rgba(255, 255, 255, 230);
+    color: #3D2B1F;
+
+    border: 2px solid #E4B4BC;
+    border-radius: 12px;
+
+    padding: 9px 14px;
+
+    selection-background-color: #C44569;
+    selection-color: #FFF8EE;
+}
+
+QLineEdit:hover {
+    border-color: #D98498;
+}
+
+QLineEdit:focus {
+    border-color: #C44569;
+    background-color: #FFFFFF;
+}
+
+QLineEdit:disabled {
+    background-color: rgba(232, 217, 213, 220);
+    color: #927C76;
+    border-color: #CDB9B6;
+}
+
+QLineEdit::placeholder {
+    color: #9A7F82;
+}
+
+
+/* ---------------------------------------------------------
+   Общая форма всех кнопок
+   --------------------------------------------------------- */
+QPushButton {
+    min-height: 32px;
+
+    color: #FFF8EE;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 17px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:pressed {
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+QPushButton:disabled {
+    background-color: rgba(128, 108, 117, 210);
+    color: rgba(255, 248, 238, 175);
+}
+
+
+/* Получить информацию */
+QPushButton#info_button {
+    min-width: 145px;
+
+    background-color: #2E8B57;
+    border: 1px solid #78BD8F;
+}
+
+QPushButton#info_button:hover {
+    background-color: #3FA86C;
+    border-color: #24563D;
+}
+
+QPushButton#info_button:pressed {
+    background-color: #246B43;
+}
+
+
+/* Выбрать папку */
+QPushButton#folder_button {
+    min-width: 130px;
+
+    background-color: #607C57;
+    border: 1px solid #91AD78;
+}
+
+QPushButton#folder_button:hover {
+    background-color: #78986A;
+    border-color: #24563D;
+}
+
+QPushButton#folder_button:pressed {
+    background-color: #4B6545;
+}
+
+
+/* ---------------------------------------------------------
+   Статус
+   --------------------------------------------------------- */
+QLabel#status_label {
+    min-height: 58px;
+
+    background-color: rgba(255, 244, 239, 220);
+    color: #5B4640;
+
+    border: 1px solid #E4B4BC;
+    border-radius: 14px;
+
+    padding: 13px 16px;
+}
+
+
+/* ---------------------------------------------------------
+   Прогресс-бар
+   --------------------------------------------------------- */
+QProgressBar {
+    min-height: 20px;
+
+    background-color: rgba(243, 225, 221, 230);
+    color: #3D2B1F;
+
+    border: 1px solid #D8B1B0;
+    border-radius: 10px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #4F9A68;
+    border-radius: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   Список качества
+   --------------------------------------------------------- */
+QComboBox {
+    min-height: 32px;
+
+    background-color: rgba(255, 255, 255, 230);
+    color: #3D2B1F;
+
+    border: 2px solid #E4B4BC;
+    border-radius: 12px;
+
+    padding: 9px 14px;
+}
+
+QComboBox:hover {
+    border-color: #D98498;
+}
+
+QComboBox:focus {
+    border-color: #C44569;
+}
+
+QComboBox:disabled {
+    background-color: rgba(232, 217, 213, 220);
+    color: #927C76;
+    border-color: #CDB9B6;
+}
+
+QComboBox::drop-down {
+    width: 32px;
+    border: none;
+}
+
+QComboBox::down-arrow {
+    width: 0;
+    height: 0;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid #607C57;
+
+    margin-right: 11px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFF8F2;
+    color: #3D2B1F;
+
+    border: 1px solid #D98498;
+    border-radius: 8px;
+
+    selection-background-color: #EAC0CB;
+    selection-color: #3D2B1F;
+
+    padding: 5px;
+}
+
+
+/* ---------------------------------------------------------
+   Нижние кнопки
+   --------------------------------------------------------- */
+
+/* Скачать */
+QPushButton#download_button {
+    background-color: #2E8B57;
+    border: 1px solid #78BD8F;
+}
+
+QPushButton#download_button:hover {
+    background-color: #3FA86C;
+    border-color: #24563D;
+}
+
+QPushButton#download_button:pressed {
+    background-color: #246B43;
+}
+
+
+/* Стоп / Продолжить */
+QPushButton#stop_button {
+    background-color: #D9942E;
+    color: #3D2B1F;
+
+    border: 1px solid #F1C66C;
+}
+
+QPushButton#stop_button:hover {
+    background-color: #E8A317;
+    border-color: #9B681A;
+}
+
+QPushButton#stop_button:pressed {
+    background-color: #BF7E1E;
+}
+
+
+/* Отмена */
+QPushButton#cancel_button {
+    background-color: #B84263;
+    border: 1px solid #E98CA4;
+}
+
+QPushButton#cancel_button:hover {
+    background-color: #C44569;
+    border-color: #8F2845;
+}
+
+QPushButton#cancel_button:pressed {
+    background-color: #972F4C;
+}
